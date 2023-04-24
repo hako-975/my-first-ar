@@ -247,7 +247,7 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/Unity Project/my-first-ar/My First AR.keystore
+  AndroidKeystoreName: C:/Users/andri/Unity Project/my-first-ar/My First AR.keystore
   AndroidKeyaliasName: my fiirst ar
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
