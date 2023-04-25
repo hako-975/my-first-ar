@@ -9,6 +9,12 @@ public class ARController : MonoBehaviour
     public ARRaycastManager raycastManager;
     [HideInInspector]
     public bool isIntantiated = false;
+    PlaneDetectionToggle planeDetectionToggle;
+
+    void Start()
+    {
+        planeDetectionToggle = FindAnyObjectByType<PlaneDetectionToggle>();
+    }
 
     private void Update()
     {
@@ -24,6 +30,7 @@ public class ARController : MonoBehaviour
                 {
                     Instantiate(myObject, touches[0].pose.position, touches[0].pose.rotation);
                     isIntantiated = true;
+                    planeDetectionToggle.SetAllPlanesActive(false);
                 }
             }
         }

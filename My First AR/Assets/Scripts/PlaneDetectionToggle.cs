@@ -43,7 +43,7 @@ public class PlaneDetectionToggle : MonoBehaviour
         toggleButtonText.text = toggleButtonMessage;
     }
 
-    private void SetAllPlanesActive(bool value)
+    public void SetAllPlanesActive(bool value)
     {
         foreach (var plane in planeManager.trackables)
         {

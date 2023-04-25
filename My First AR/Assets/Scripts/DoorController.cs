@@ -15,13 +15,13 @@ public class DoorController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        animator.SetBool("DoorOpen", true);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("MainCamera"))
         {
-            animator.SetBool("DoorOpen", true);
             if (isEntered == false)
             {
                 terrain1.layer = LayerMask.NameToLayer("Default");
