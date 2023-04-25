@@ -8,9 +8,6 @@ using UnityEngine.XR.ARFoundation;
 public class PlaneDetectionToggle : MonoBehaviour
 {
     private ARPlaneManager planeManager;
-    [SerializeField]
-    private TextMeshProUGUI toggleButtonText;
-    string toggleButtonMessage = "";
     ARController aRController;
 
     void Awake()
@@ -25,7 +22,6 @@ public class PlaneDetectionToggle : MonoBehaviour
 
         if (planeManager.enabled)
         {
-            toggleButtonMessage = "Disable";
             SetAllPlanesActive(true);
             aRController.isIntantiated = false;
             GameObject[] prefabs = GameObject.FindGameObjectsWithTag("myObject");
@@ -36,11 +32,9 @@ public class PlaneDetectionToggle : MonoBehaviour
         }
         else
         {
-            toggleButtonMessage = "Enable";
             SetAllPlanesActive(false);
         }
 
-        toggleButtonText.text = toggleButtonMessage;
     }
 
     public void SetAllPlanesActive(bool value)
