@@ -5,10 +5,12 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     Animator animator;
-/*    public GameObject terrain1;
+    public GameObject terrain1;
     public GameObject terrain2;
-    public GameObject wall;*/
-
+    public GameObject wall;
+    
+    bool isEntered = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,33 +22,20 @@ public class DoorController : MonoBehaviour
         if (other.CompareTag("MainCamera"))
         {
             animator.SetBool("DoorOpen", true);
-            /*
-            if (terrain1.activeSelf)
+            if (isEntered == false)
             {
-                terrain1.SetActive(false);
+                terrain1.layer = LayerMask.NameToLayer("Default");
+                terrain2.layer = LayerMask.NameToLayer("Default");
+                wall.layer = LayerMask.NameToLayer("Default");
+                isEntered = true;
             }
             else
             {
-                terrain1.SetActive(true);
+                terrain1.layer = LayerMask.NameToLayer("PortalContents");
+                terrain2.layer = LayerMask.NameToLayer("PortalContents");
+                wall.layer = LayerMask.NameToLayer("PortalContents");
+                isEntered = false;
             }
-
-            if (terrain2.activeSelf)
-            {
-                terrain2.SetActive(false);
-            }
-            else
-            {
-                terrain2.SetActive(true);
-            }
-
-            if (wall.activeSelf)
-            {
-                wall.SetActive(false);
-            }
-            else
-            {
-                wall.SetActive(true);
-            }*/
         }
     }
 }
