@@ -6,14 +6,15 @@ using UnityEngine.XR.ARFoundation;
 public class ARController : MonoBehaviour
 {
     public GameObject myObject;
-    public ARRaycastManager raycastManager;
+    ARRaycastManager raycastManager;
     [HideInInspector]
     public bool isIntantiated = false;
     PlaneDetectionToggle planeDetectionToggle;
 
-    void Start()
+    private void Awake()
     {
-        planeDetectionToggle = FindAnyObjectByType<PlaneDetectionToggle>();
+        raycastManager = GetComponent<ARRaycastManager>();
+        planeDetectionToggle = GetComponent<PlaneDetectionToggle>();
     }
 
     private void Update()

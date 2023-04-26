@@ -7,13 +7,13 @@ using UnityEngine.XR.ARFoundation;
 [RequireComponent(typeof(ARPlaneManager))]
 public class PlaneDetectionToggle : MonoBehaviour
 {
-    private ARPlaneManager planeManager;
+    ARPlaneManager planeManager;
     ARController aRController;
 
     void Awake()
     {
         planeManager = GetComponent<ARPlaneManager>();
-        aRController = FindAnyObjectByType<ARController>();
+        aRController = GetComponent<ARController>();
     }
     
     public void TogglePlaneDetection()

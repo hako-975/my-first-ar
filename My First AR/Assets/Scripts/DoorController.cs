@@ -5,8 +5,7 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     Animator animator;
-    public GameObject terrain1;
-    public GameObject terrain2;
+    public GameObject terrain;
     public GameObject wall;
     
     bool isEntered = false;
@@ -24,15 +23,13 @@ public class DoorController : MonoBehaviour
         {
             if (isEntered == false)
             {
-                terrain1.layer = LayerMask.NameToLayer("Default");
-                terrain2.layer = LayerMask.NameToLayer("Default");
+                terrain.layer = LayerMask.NameToLayer("Default");
                 wall.layer = LayerMask.NameToLayer("Default");
                 isEntered = true;
             }
             else
             {
-                terrain1.layer = LayerMask.NameToLayer("PortalContents");
-                terrain2.layer = LayerMask.NameToLayer("PortalContents");
+                terrain.layer = LayerMask.NameToLayer("PortalContents");
                 wall.layer = LayerMask.NameToLayer("PortalContents");
                 isEntered = false;
             }
