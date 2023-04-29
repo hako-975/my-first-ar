@@ -136,8 +136,8 @@ PlayerSettings:
     Others: 1
   bundleVersion: 0.1
   preloadedAssets:
-  - {fileID: -633676824161505409, guid: e45240bdaf5db504a892eb88160a0382, type: 2}
   - {fileID: 4800000, guid: c9f956787b1d945e7b36e0516201fc76, type: 3}
+  - {fileID: -633676824161505409, guid: e45240bdaf5db504a892eb88160a0382, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -249,7 +249,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/andri/Unity Project/my-first-ar/My First AR.keystore
+  AndroidKeystoreName: C:/Users/YANTEK - B2TKS/Unity Projects/my-first-ar/My First
+    AR.keystore
   AndroidKeyaliasName: my fiirst ar
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
